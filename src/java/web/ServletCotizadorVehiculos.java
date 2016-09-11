@@ -31,19 +31,14 @@ public class ServletCotizadorVehiculos extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        response.setContentType("text/html;charset=UTF-8");
-        try (PrintWriter out = response.getWriter()) {
-            /* TODO output your page here. You may use following sample code. */
-            out.println("<!DOCTYPE html>");
-            out.println("<html>");
-            out.println("<head>");
-            out.println("<title>Servlet ServletCotizadorVehiculos</title>");            
-            out.println("</head>");
-            out.println("<body>");
-            out.println("<h1>Servlet ServletCotizadorVehiculos at " + request.getContextPath() + "</h1>");
-            out.println("</body>");
-            out.println("</html>");
-        }
+        
+        String recogida = request.getParameter("selRecorido");
+        String fechaRecogida = request.getParameter("fechaRecogida");
+        String horaRecogida = request.getParameter("selHoraRecogida");
+        String minutoRecogida = request.getParameter("selMinutoRecogida");
+        String fechaDevolucion = request.getParameter("fechaDevolucion");
+        String horaDevolucion = request.getParameter("selHoraDevolucion");
+        String minutoDevolucion = request.getParameter("selMinutoDevolucion");
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
