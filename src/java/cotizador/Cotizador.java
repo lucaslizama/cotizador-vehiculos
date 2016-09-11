@@ -4,7 +4,7 @@ import java.util.Date;
 
 public class Cotizador {
 
-    public int obtenerHoras(Date recogida, Date devolucion) {
+    private int obtenerHoras(Date recogida, Date devolucion) {
 
         long inicio = recogida.getTime();
         long termino = devolucion.getTime();
@@ -14,12 +14,8 @@ public class Cotizador {
     }
 
     public int obtenerDias(Date recogida, Date devolucion) {
-
-        long inicio = recogida.getTime();
-        long termino = devolucion.getTime();
-        Long dias = (((inicio - termino) / 1000) / 3600) / 24;
-
-        return dias.intValue();
+        int dias = obtenerHoras(recogida, devolucion) / 24;
+        return dias;
     }
 
     public int calcularValor() {
