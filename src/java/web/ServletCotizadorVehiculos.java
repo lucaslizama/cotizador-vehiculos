@@ -7,6 +7,13 @@ package web;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.Dictionary;
+import java.util.HashMap;
+import java.util.Locale;
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -17,7 +24,7 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author Lucas
  */
-@WebServlet(name = "ServletCotizadorVehiculos", urlPatterns = {"/ServletCotizadorVehiculos"})
+@WebServlet(name = "ServletCotizadorVehiculos", urlPatterns = {"/cotizador.do"})
 public class ServletCotizadorVehiculos extends HttpServlet {
 
     /**
@@ -31,14 +38,18 @@ public class ServletCotizadorVehiculos extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+        ProcesarRequest procesador = new ProcesarRequest(request);
+        HashMap<String,Integer> mensajes = new HashMap<>();
         
-        String recogida = request.getParameter("selRecorido");
-        String fechaRecogida = request.getParameter("fechaRecogida");
-        String horaRecogida = request.getParameter("selHoraRecogida");
-        String minutoRecogida = request.getParameter("selMinutoRecogida");
-        String fechaDevolucion = request.getParameter("fechaDevolucion");
-        String horaDevolucion = request.getParameter("selHoraDevolucion");
-        String minutoDevolucion = request.getParameter("selMinutoDevolucion");
+        try {
+            mensajes = procesador.GetMensajeCotizasion();
+        }catch (Exception ex) {
+            
+        }
+        
+        request.setAttribute("mensajes", mensajes);
+        RequestDispatcher rd = request.getRequestDispatcher("mostrarCotizasion.jsp");
+        rd.forward(request, response);
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
