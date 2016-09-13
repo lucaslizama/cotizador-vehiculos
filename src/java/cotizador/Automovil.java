@@ -4,13 +4,13 @@ public class Automovil {
     private String nombre;
     private int precio_dia;
     private int precio_semana;
-    private int hora_semana;
+    private int hora_adicional;
 
     public Automovil(String nombre, int precio_dia, int precio_semana, int hora_semana) {
         this.nombre = nombre;
         this.precio_dia = precio_dia;
         this.precio_semana = precio_semana;
-        this.hora_semana = hora_semana;
+        this.hora_adicional = hora_semana;
     }
 
     public String getNombre() {
@@ -37,12 +37,12 @@ public class Automovil {
         this.precio_semana = precio_semana;
     }
 
-    public int getHora_semana() {
-        return hora_semana;
+    public int getHora_adicional() {
+        return hora_adicional;
     }
 
-    public void setHora_semana(int hora_semana) {
-        this.hora_semana = hora_semana;
+    public void setHora_adicional(int hora_adicional) {
+        this.hora_adicional = hora_adicional;
     }
     
     
