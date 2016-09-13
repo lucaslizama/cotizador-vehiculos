@@ -45,11 +45,11 @@ public class Cotizador {
     public int calcularValor(String auto, String recogida) {
         switch (auto) {
             case "Compacto":
-                return valorCompacto();
+                return valorCompacto() + valorRecargo(recogida);
             case "Sedan":
-                return valorSedan();
+                return valorSedan() + valorRecargo(recogida);
             case "Camioneta":
-                return valorCamioneta();
+                return valorCamioneta() + valorRecargo(recogida);
             default:
                 return 0;
         }
@@ -92,6 +92,14 @@ public class Cotizador {
             default:
                 return 0;
         }
+    }
+    
+    private int valorRecargo(String recogida) {
+        for (int i = 0; i < lugaresRecogida.length; i++) {
+            if(lugaresRecogida[i].getNombre().equals(recogida))
+                return lugaresRecogida[i].getRecargo();
+        }
+        return 0;
     }
 
     private int valorCompacto() {
