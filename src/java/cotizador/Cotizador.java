@@ -20,7 +20,7 @@ public class Cotizador {
 
         long inicio = recogida.getTime();
         long termino = entrega.getTime();
-        Long horas = (inicio - termino) / 3600000L;
+        Long horas = (termino - inicio) / 3600000L;
 
         return horas.intValue();
     }
