@@ -54,6 +54,18 @@ public class Cotizador {
                 return 0;
         }
     }
+    
+    private int valorCompacto() {
+        return valorSemana("Compacto") + valorDiasExtra("Compacto") + valorHorasExtra("Compacto");
+    }
+
+    private int valorSedan() {
+        return valorSemana("Sedan") + valorDiasExtra("Sedan") + valorHorasExtra("Sedan");
+    }
+
+    private int valorCamioneta() {
+        return valorSemana("Camioneta") + valorDiasExtra("Camioneta") + valorHorasExtra("Camioneta");
+    }
 
     private int valorSemana(String auto) {
         switch (auto) {
@@ -100,18 +112,6 @@ public class Cotizador {
                 return lugaresRecogida[i].getRecargo();
         }
         return 0;
-    }
-
-    private int valorCompacto() {
-        return valorSemana("Compacto") + valorDiasExtra("Compacto") + valorHorasExtra("Compacto");
-    }
-
-    private int valorSedan() {
-        return valorSemana("Sedan") + valorDiasExtra("Sedan") + valorHorasExtra("Sedan");
-    }
-
-    private int valorCamioneta() {
-        return valorSemana("Camioneta") + valorDiasExtra("Camioneta") + valorHorasExtra("Camioneta");
     }
 
     private Automovil[] inicializarAutomoviles() {
