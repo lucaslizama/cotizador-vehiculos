@@ -40,15 +40,17 @@ public class ServletCotizadorVehiculos extends HttpServlet {
             throws ServletException, IOException {
         ProcesarRequest procesador = new ProcesarRequest(request);
         HashMap<String,Integer> mensajes = new HashMap<>();
+        RequestDispatcher rd;
         
         try {
             mensajes = procesador.getMensajeCotizasion();
         }catch (Exception ex) {
-            
+            rd = request.getRequestDispatcher("index.html");
+            rd.forward(request, response);
         }
         
         request.setAttribute("mensajes", mensajes);
-        RequestDispatcher rd = request.getRequestDispatcher("mostrarCotizacion.jsp");
+        rd = request.getRequestDispatcher("mostrarCotizacion.jsp");
         rd.forward(request, response);
     }
 

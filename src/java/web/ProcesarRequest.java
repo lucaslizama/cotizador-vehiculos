@@ -23,6 +23,10 @@ public class ProcesarRequest {
     public HashMap<String,Integer> getMensajeCotizasion() throws Exception{
         Date recogida = format.parse(request.getParameter("fechaRecogida"));
         Date entrega = format.parse(request.getParameter("fechaDevolucion"));
+        
+        if(entrega.getTime() - recogida.getTime() < 0)
+            throw new Exception("Fechas invalidas");
+        
         Cotizador cotiza = new Cotizador(recogida,entrega);
         HashMap<String,Integer> mensajes = new HashMap<>();
         
