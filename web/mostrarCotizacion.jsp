@@ -36,7 +36,7 @@
                         <td>$<%=mensajes.get("Compacto")%></td>
                     </tr>
                     <tr>
-                        <td>Sedan<img src="imagenes/sedan.jpg" width="150" height="80" alt="sedan"></td>                                                                                                                                                                                                                                                                                                                                                                                                                                         jpg" width="150" height="80" alt="sedan"></td>
+                        <td>Sedan<img src="imagenes/sedan.jpg" width="150" height="80" alt="sedan"></td>
                         <td>$35000</td>
                         <td>$171500</td>
                         <td>$2500</td>
