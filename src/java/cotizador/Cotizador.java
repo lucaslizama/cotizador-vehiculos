@@ -124,11 +124,11 @@ public class Cotizador {
 
     private LugarRecogida[] inicializarLugaresRecogida() {
         LugarRecogida[] lugares = new LugarRecogida[5];
-        lugares[0] = new LugarRecogida("Santiago Provicendia", 0);
-        lugares[1] = new LugarRecogida("Santiago Aeropuerto", 5000);
-        lugares[2] = new LugarRecogida("Puerto Montt Centro", 0);
-        lugares[3] = new LugarRecogida("Puerto Montt Aeropuerto", 5000);
-        lugares[4] = new LugarRecogida("Antofagasta Aeropuerto", 5000);
+        lugares[0] = new LugarRecogida("santiago_providencia", 0);
+        lugares[1] = new LugarRecogida("santiago_Aeropuerto", 5000);
+        lugares[2] = new LugarRecogida("puerto_centro", 0);
+        lugares[3] = new LugarRecogida("puerto_aeropuerto", 5000);
+        lugares[4] = new LugarRecogida("antofagasta_aeropuerto", 5000);
         return lugares;
     }
 }

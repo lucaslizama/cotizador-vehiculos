@@ -10,6 +10,7 @@ import javax.resource.NotSupportedException;
 import javax.servlet.http.HttpServletRequest;
 import org.junit.Test;
 import static org.junit.Assert.*;
+import web.ProcesarRequest;
 
 /**
  *
@@ -31,8 +32,19 @@ public class ProcesarRequestTest {
     @Test
     public void getMensajeCotizacionTest() {
         request = new ServletFakeArtifactSet.FakeServletHttpRequest("", "");
-        request.setAttribute("", this);
+        request.setAttribute("selRecorido", "santiago_providencia");
+        request.setAttribute("fechaRecogida", "2016-05-12");
+        request.setAttribute("horaRecogida", "02");
+        request.setAttribute("selMinutoRecogida", "45");
+        request.setAttribute("fechaDevolucion", "2016-06-15");       
+        request.setAttribute("selHoraDevolucion", "05");
+        request.setAttribute("selMinutoDevolucion", "00");
+       
+        ProcesarRequest pr = new ProcesarRequest(request);
+        assertEquals(request, this);
         
-        assertTrue(false);
+                
+        
+        
     }
 }
