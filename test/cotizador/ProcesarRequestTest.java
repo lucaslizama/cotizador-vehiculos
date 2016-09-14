@@ -5,7 +5,9 @@
  */
 package cotizador;
 
+import com.sun.xml.ws.transport.tcp.server.glassfish.ServletFakeArtifactSet;
 import javax.resource.NotSupportedException;
+import javax.servlet.http.HttpServletRequest;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
@@ -14,6 +16,8 @@ import static org.junit.Assert.*;
  * @author Lucas
  */
 public class ProcesarRequestTest {
+    
+    private HttpServletRequest request;
     
     public ProcesarRequestTest() {
     }
@@ -26,6 +30,9 @@ public class ProcesarRequestTest {
     
     @Test
     public void getMensajeCotizacionTest() {
+        request = new ServletFakeArtifactSet.FakeServletHttpRequest("", "");
+        request.setAttribute("", this);
+        
         assertTrue(false);
     }
 }
