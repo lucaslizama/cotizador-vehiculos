@@ -48,7 +48,7 @@ public class ServletCotizadorVehiculos extends HttpServlet {
         }
         
         request.setAttribute("mensajes", mensajes);
-        RequestDispatcher rd = request.getRequestDispatcher("mostrarCotizasion.jsp");
+        RequestDispatcher rd = request.getRequestDispatcher("mostrarCotizacion.jsp");
         rd.forward(request, response);
     }
 

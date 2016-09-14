@@ -6,100 +6,99 @@ and open the template in the editor.
 -->
 <html>
     <head>
-        <title>TODO supply a title</title>
+        <title>Bienvenido a nuestra pagina</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/cssIndex.css" type="text/css"><link>
     </head>
-    <body>
-        <div>
-            <form action="cotizador.do" method="POST">
-                <fieldset>
-                    <label for="recogida">Recogida</label>
-                    <select name="selRecorido" size="1">
-                        <option value="santiago_providencia">Santiago Providencia</option>
-                        <option value="santiago_Aeropuerto">Santiago Aeropuerto</option>
-                        <option value="puerto_centro">Puerto Montt Centro</option>
-                        <option value="puerto_aeropuerto">Puerto Montt Aeropuerto</option>
-                        <option value="antofagasta_aeropuerto">Antofagasta Aeropuerto</option>
-                    </select>
-                    <br/>
-                    <input name="check" type="checkbox"/>Devolvere el vehiculo en otra localidad de añquiler Hertz
-                    <br/>
-                    <label for="recogidaInicio">Recogida</label>
-                    <input type="date" name="fechaRecogida"/>
-                    <label for="horaRecogida">Hora Recogida</label>
-                    <select name="selHoraRecogida" size="1">
-                        <option value="0">0</option> 
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                        <option value="6">6</option>
-                        <option value="7">7</option>
-                        <option value="8">8</option>
-                        <option value="9">9</option>
-                        <option value="10">10</option>
-                        <option value="11">11</option>
-                        <option value="12">12</option>
-                        <option value="13">13</option>
-                        <option value="14">14</option>
-                        <option value="15">15</option>
-                        <option value="16">16</option>
-                        <option value="17">17</option>
-                        <option value="18">18</option>
-                        <option value="19">19</option>
-                        <option value="20">20</option>
-                        <option value="21">21</option>
-                        <option value="22">22</option>
-                        <option value="23">23</option>                                               
-                    </select>
-                    <select name="selMinutoRecogida" size="1">
-                        <option value="8">00</option> 
-                        <option value="1">15</option>
-                        <option value="2">30</option>
-                        <option value="3">45</option>                                                                    
-                    </select>
-                    <br/>
-                    <label for="recogidaDevolucion">Devolucion</label>
-                    <input type="date" name="fechaDevolucion"/>
-                    <label for="horaDevolucion">Hora Devolucion</label>
-                    <select name="selHoraDevolucion" size="1">
-                        <option value="0">0</option> 
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                        <option value="6">6</option>
-                        <option value="7">7</option>
-                        <option value="8">8</option>
-                        <option value="9">9</option>
-                        <option value="10">10</option>
-                        <option value="11">11</option>
-                        <option value="12">12</option>
-                        <option value="13">13</option>
-                        <option value="14">14</option>
-                        <option value="15">15</option>
-                        <option value="16">16</option>
-                        <option value="17">17</option>
-                        <option value="18">18</option>
-                        <option value="19">19</option>
-                        <option value="20">20</option>
-                        <option value="21">21</option>
-                        <option value="22">22</option>
-                        <option value="23">23</option>                                               
-                    </select>
-                    <select name="selMinutoDevolucion" size="1">
-                        <option value="8">00</option> 
-                        <option value="1">15</option>
-                        <option value="2">30</option>
-                        <option value="3">45</option>                                                                    
-                    </select>
-                    <br/>
-                    <input id="btnEnviar" value="Enviar" type="submit"/>
+    <body>        
+        <form action="cotizador.do" method="POST">
+            <fieldset>
+                <label for="recogida">Recogida</label>
+                <select name="selRecorido" size="1">
+                    <option value="santiago_providencia">Santiago Providencia</option>
+                    <option value="santiago_Aeropuerto">Santiago Aeropuerto</option>
+                    <option value="puerto_centro">Puerto Montt Centro</option>
+                    <option value="puerto_aeropuerto">Puerto Montt Aeropuerto</option>
+                    <option value="antofagasta_aeropuerto">Antofagasta Aeropuerto</option>
+                </select>
+                <br/>
+                <input name="check" type="checkbox"/>Devolvere el vehiculo en otra localidad de añquiler Hertz
+                <br/>
+                <label for="recogidaInicio">Recogida</label>
+                <input type="date" name="fechaRecogida"/>
+                <label for="horaRecogida">Hora Recogida</label>
+                <select name="selHoraRecogida" size="1">
+                    <option value="0">0</option> 
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                    <option value="13">13</option>
+                    <option value="14">14</option>
+                    <option value="15">15</option>
+                    <option value="16">16</option>
+                    <option value="17">17</option>
+                    <option value="18">18</option>
+                    <option value="19">19</option>
+                    <option value="20">20</option>
+                    <option value="21">21</option>
+                    <option value="22">22</option>
+                    <option value="23">23</option>                                               
+                </select>
+                <select name="selMinutoRecogida" size="1">
+                    <option value="8">00</option> 
+                    <option value="1">15</option>
+                    <option value="2">30</option>
+                    <option value="3">45</option>                                                                    
+                </select>
+                <br/>
+                <label for="recogidaDevolucion">Devolucion</label>
+                <input type="date" name="fechaDevolucion"/>
+                <label for="horaDevolucion">Hora Devolucion</label>
+                <select name="selHoraDevolucion" size="1">
+                    <option value="0">0</option> 
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                    <option value="13">13</option>
+                    <option value="14">14</option>
+                    <option value="15">15</option>
+                    <option value="16">16</option>
+                    <option value="17">17</option>
+                    <option value="18">18</option>
+                    <option value="19">19</option>
+                    <option value="20">20</option>
+                    <option value="21">21</option>
+                    <option value="22">22</option>
+                    <option value="23">23</option>                                               
+                </select>
+                <select name="selMinutoDevolucion" size="1">
+                    <option value="8">00</option> 
+                    <option value="1">15</option>
+                    <option value="2">30</option>
+                    <option value="3">45</option>                                                                    
+                </select>
+                <br/>
+                <input id="btnEnviar" value="Enviar" type="submit" name="botons"/>
             </fieldset>
-            </form>
-        </div>
+        </form>        
     </body>
 </html>
