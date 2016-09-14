@@ -20,7 +20,7 @@ public class ProcesarRequest {
         this.format = new SimpleDateFormat("yyyy-MM-dd");
     }
     
-    public HashMap<String,Integer> GetMensajeCotizasion() throws Exception{
+    public HashMap<String,Integer> getMensajeCotizasion() throws Exception{
         Date recogida = format.parse(request.getParameter("fechaRecogida"));
         Date entrega = format.parse(request.getParameter("fechaDevolucion"));
         Cotizador cotiza = new Cotizador(recogida,entrega);

@@ -42,7 +42,7 @@ public class ServletCotizadorVehiculos extends HttpServlet {
         HashMap<String,Integer> mensajes = new HashMap<>();
         
         try {
-            mensajes = procesador.GetMensajeCotizasion();
+            mensajes = procesador.getMensajeCotizasion();
         }catch (Exception ex) {
             
         }

@@ -5,6 +5,7 @@
  */
 package cotizador;
 
+import javax.resource.NotSupportedException;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
@@ -22,4 +23,9 @@ public class ProcesarRequestTest {
     //
     // @Test
     // public void hello() {}
+    
+    @Test
+    public void getMensajeCotizacionTest() {
+        assertTrue(false);
+    }
 }
