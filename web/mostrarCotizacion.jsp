@@ -14,12 +14,13 @@
         <link rel="stylesheet" href="css/cssIndex.css" type="text/css"><link>
     </head>
     <body>
+        <h3>Estos son los valores segun modelo y tiempo</h3>
         <div>
             <fieldset>
                 <table>
                     <tr>
-                        <td>Categoria de Automovil</td>
-                        <td>Precio po Dia</td>
+                        <td>Tipo de Automovil</td>
+                        <td>Precio por Dia</td>
                         <td>Precio por Semana</td>
                         <td>Hora Adicional</td>
                     </tr>
@@ -30,13 +31,13 @@
                         <td></td>
                     </tr>
                     <tr>
-                        <td>Sedan<img src="imagenes/sedan.jpg.jpg" width="150" height="80" alt="sedan"></td>
+                        <td>Sedan<img src="imagenes/sedan.jpg" width="150" height="80" alt="sedan"></td>
                         <td></td>
                         <td></td>
                         <td></td>
                     </tr>
                     <tr>
-                        <td>Camioneta<img src="imagenes/camioneta.jpg.jpg" width="150" height="80" alt="camioneta"></td>
+                        <td>Camioneta<img src="imagenes/camioneta.jpg" width="150" height="80" alt="camioneta"></td>
                         <td></td>
                         <td></td>
                         <td></td>
