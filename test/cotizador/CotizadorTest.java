@@ -118,7 +118,7 @@ public class CotizadorTest {
         Date fecha2 = new Date(3600000L * 51L);
         
         cotizador = new Cotizador(fecha1, fecha2);
-        assertEquals(82500, cotizador.calcularValor("Sedan", "Santiago Aeropuerto"));
+        assertEquals(82500, cotizador.calcularValor("Sedan", "santiago_aeropuerto"));
     }
     
     @Test
@@ -127,6 +127,6 @@ public class CotizadorTest {
         Date fecha2 = new Date(3600000L * 24L * 17L + 3600000L * 7);
         
         cotizador = new Cotizador(fecha1, fecha2);
-        assertEquals(570000, cotizador.calcularValor("Camioneta", "Santiago Providencia"));
+        assertEquals(570000, cotizador.calcularValor("Camioneta", "santiago_providencia"));
     }
 }

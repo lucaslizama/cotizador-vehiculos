@@ -17,12 +17,12 @@ public class ProcesarRequest {
     
     public ProcesarRequest(HttpServletRequest request) {
         this.request = request;
-        this.format = new SimpleDateFormat("yyyy-MM-dd");
+        this.format = new SimpleDateFormat("yyyy-MM-dd hh:mm");
     }
     
     public HashMap<String,Integer> getMensajeCotizasion() throws Exception{
-        Date recogida = format.parse(request.getParameter("fechaRecogida"));
-        Date entrega = format.parse(request.getParameter("fechaDevolucion"));
+        Date recogida = format.parse(formatDateStringRecogida());
+        Date entrega = format.parse(formatDateStringDevolucion());
         
         if(entrega.getTime() - recogida.getTime() < 0)
             throw new Exception("Fechas invalidas");
@@ -35,5 +35,31 @@ public class ProcesarRequest {
         mensajes.put("Camioneta", cotiza.calcularValor("Camioneta", request.getParameter("selRecorrido")));
         
         return mensajes;
+    } 
+    
+    private String formatDateStringRecogida() {
+        String fecha = request.getParameter("fechaRecogida");
+        fecha = fecha.concat(" " + getTimeStringRecogida());
+        return fecha;
+    }
+    
+    private String formatDateStringDevolucion() {
+        String fecha = request.getParameter("fechaDevolucion");
+        fecha = fecha.concat(" " + getTimeStringDevolucion());
+        return fecha;
+    }
+    
+    private String getTimeStringRecogida() {
+        String horas = request.getParameter("selHoraRecogida");
+        String minutos = request.getParameter("selMinutoRecogida");
+        
+        return horas + ":" + minutos;
+    }
+    
+    private String getTimeStringDevolucion() {
+        String horas = request.getParameter("selHoraDevolucion");
+        String minutos = request.getParameter("selMinutoDevolucion");
+        
+        return horas + ":" + minutos;
     }
 }
