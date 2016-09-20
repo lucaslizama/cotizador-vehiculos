@@ -1,6 +1,12 @@
 package cotizador;
 
+/**
+ * Clase que nos permite almacenar la informacion de el lugar de recogida.
+ *
+ * @author Pancho
+ */
 public class LugarRecogida {
+
     private String nombre;
     private int recargo;
 

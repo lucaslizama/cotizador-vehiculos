@@ -1,18 +1,31 @@
 package cotizador;
-
+/**
+ * Clase Automovil que permite almacenar informacion del automovil.
+ * @author Pancho
+ */
 public class Automovil {
     private String nombre;
     private int precio_dia;
     private int precio_semana;
     private int hora_adicional;
 
+    /**
+     * Constructor con parametros 
+     * @param nombre
+     * @param precio_dia
+     * @param precio_semana
+     * @param hora_semana 
+     */
     public Automovil(String nombre, int precio_dia, int precio_semana, int hora_semana) {
         this.nombre = nombre;
         this.precio_dia = precio_dia;
         this.precio_semana = precio_semana;
         this.hora_adicional = hora_semana;
     }
-
+    /**
+     * 
+     * @return 
+     */
     public String getNombre() {
         return nombre;
     }
@@ -32,7 +45,10 @@ public class Automovil {
     public int getPrecio_semana() {
         return precio_semana;
     }
-
+    /**
+     * 
+     * @param precio_semana 
+     */
     public void setPrecio_semana(int precio_semana) {
         this.precio_semana = precio_semana;
     }

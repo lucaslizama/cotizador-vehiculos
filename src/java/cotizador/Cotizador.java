@@ -16,6 +16,11 @@ public class Cotizador {
         this.lugaresRecogida = inicializarLugaresRecogida();
     }
 
+    /**
+     * Metodo publico que calcula las horas.
+     *
+     * @return
+     */
     public int obtenerHoras() {
 
         long inicio = recogida.getTime();
@@ -25,23 +30,50 @@ public class Cotizador {
         return horas.intValue();
     }
 
+    /**
+     * Metodo publico que calcula los dias.
+     *
+     * @return
+     */
     public int obtenerDias() {
         int dias = obtenerHoras() / 24;
         return dias;
     }
 
+    /**
+     * Metodo publico que calcula las semanas.
+     *
+     * @return
+     */
     public int obtenerSemanas() {
         return obtenerDias() / 7;
     }
 
+    /**
+     * Metodo publico que obtiene los dias extra.
+     *
+     * @return
+     */
     public int obtenerDiasExtra() {
         return obtenerDias() - (obtenerSemanas() * 7);
     }
 
+    /**
+     * Metodo publico que obtiene las horas extras.
+     *
+     * @return
+     */
     public int obtenerHorasExtra() {
         return obtenerHoras() - (obtenerDias() * 24);
     }
 
+    /**
+     * Metodo publico que calcula el valor de la cotizacion final.
+     *
+     * @param auto
+     * @param recogida
+     * @return
+     */
     public int calcularValor(String auto, String recogida) {
         switch (auto) {
             case "Compacto":
@@ -54,19 +86,40 @@ public class Cotizador {
                 return 0;
         }
     }
-    
+
+    /**
+     * Metodo privado que obtiene valores segun su categoria compacto.
+     *
+     * @return
+     */
     private int valorCompacto() {
         return valorSemana("Compacto") + valorDiasExtra("Compacto") + valorHorasExtra("Compacto");
     }
 
+    /**
+     * Metodo privado que obtiene valores segun su categoria sedan.
+     *
+     * @return
+     */
     private int valorSedan() {
         return valorSemana("Sedan") + valorDiasExtra("Sedan") + valorHorasExtra("Sedan");
     }
 
+    /**
+     * Metodo privado que obtiene valores segun su categoria camioneta.
+     *
+     * @return
+     */
     private int valorCamioneta() {
         return valorSemana("Camioneta") + valorDiasExtra("Camioneta") + valorHorasExtra("Camioneta");
     }
 
+    /**
+     * Metodo privado que calcula segun la categoria el valor por semana.
+     *
+     * @param auto
+     * @return
+     */
     private int valorSemana(String auto) {
         switch (auto) {
             case "Compacto":
@@ -80,6 +133,12 @@ public class Cotizador {
         }
     }
 
+    /**
+     * Metodo privado que calcula los dias extras segun la categoria.
+     *
+     * @param auto
+     * @return
+     */
     private int valorDiasExtra(String auto) {
         switch (auto) {
             case "Compacto":
@@ -93,6 +152,12 @@ public class Cotizador {
         }
     }
 
+    /**
+     * Metodo privado que calcula el valor de horas extras segun su categoria.
+     *
+     * @param auto
+     * @return
+     */
     private int valorHorasExtra(String auto) {
         switch (auto) {
             case "Compacto":
@@ -105,11 +170,18 @@ public class Cotizador {
                 return 0;
         }
     }
-    
+
+    /**
+     * Metodo privado que calcula el valor del recargo.
+     *
+     * @param recogida
+     * @return
+     */
     private int valorRecargo(String recogida) {
         for (int i = 0; i < lugaresRecogida.length; i++) {
-            if(lugaresRecogida[i].getNombre().equals(recogida))
+            if (lugaresRecogida[i].getNombre().equals(recogida)) {
                 return lugaresRecogida[i].getRecargo();
+            }
         }
         return 0;
     }
